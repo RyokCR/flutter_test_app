@@ -23,6 +23,7 @@ Widget registerButton(_formKey) {
               if (_formKey.currentState!.validate()) {
                 context.read<LoginRegisterBloc>().add(RegisterSubmitted(
                   onSuccess: () {
+                    Provider.of<LoginRegisterBloc>(context, listen: false);
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (_) {
 
@@ -30,7 +31,7 @@ Widget registerButton(_formKey) {
                         ChangeNotifierProvider(
                             create: (_) => context.watch<User>()),
                         BlocProvider(
-                            create: (_) => context.watch<LoginRegisterBloc>())
+                            create: (_) => Provider.of<LoginRegisterBloc>(context, listen: false))
                       ],
                         child: HomePage(),);
                     }));

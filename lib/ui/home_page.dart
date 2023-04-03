@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
 
                 return MultiProvider(providers: [
                   ChangeNotifierProvider(create: (_) => context.watch<User>()),
-                  BlocProvider(create: (_) => context.read<LoginRegisterBloc>())
+                  BlocProvider(create: (_) => Provider.of<LoginRegisterBloc>(context, listen: false))
                 ],
                   child: LoginView(),);
               }));

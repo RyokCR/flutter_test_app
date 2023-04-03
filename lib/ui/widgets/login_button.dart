@@ -28,13 +28,14 @@ Widget loginButton(_formKey) {
                 context.read<LoginRegisterBloc>().add(LoginSubmitted(
                     onSuccess: () {
 
+                      Provider.of<LoginRegisterBloc>(context, listen: false);
                       Navigator.of(context)
                           .push(MaterialPageRoute(builder: (_) {
                         return MultiProvider(providers: [
                           ChangeNotifierProvider(create: (_) => context.watch<User>()),
-                          BlocProvider(create: (_) => context.watch<LoginRegisterBloc>())
+                          BlocProvider(create: (_) => Provider.of<LoginRegisterBloc>(context, listen: false))
                         ],
-                          child: HomePage(),);// HomePage();
+                          child: HomePage(),);
                       }
 
 
