@@ -1,16 +1,13 @@
 # flutter_test_app
 
-A new Flutter project.
+Prueba práctica
 
-## Getting Started
+## Ejercicios 1 y 2
 
-This project is a starting point for a Flutter application.
+Los ejercicios 1 y 2 se encuentran en la carpeta exercises con Ex1.dart perteneciente al ejercicio 1 y Ex2.dart perteneciente al ejercicio 2
+Ambos se encuentran resueltos y comentados en sus respectivos files.
 
-A few resources to get you started if this is your first Flutter project:
+## Ejercicio 3
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+La aplicación deseada se encuentra implementada en la carpeta lib.
+Los test implementados son files bloc_state_test.dart y shared_preferences_test.dart ambos en la carpeta test.
